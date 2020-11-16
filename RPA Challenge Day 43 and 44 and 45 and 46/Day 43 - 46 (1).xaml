@@ -1,0 +1,175 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Day_43___46" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="939.2,2597.6" sap2010:WorkflowViewState.IdRef="Day_43___46_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ufa="clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="40">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Form.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Activities.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="24">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="This is a bot which creates a form using &quot;Create Form Activity&quot; and asks user to fill the required details then saves it in an excel and sends that excel as an e-mail attachment ..." DisplayName="Day 43- 46 (1)" sap:VirtualizedContainerService.HintSize="949.6,2392.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strData" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtData" />
+      <Variable x:TypeArguments="x:Int32" Name="UserInput" />
+      <Variable x:TypeArguments="x:String" Name="strName" />
+      <Variable x:TypeArguments="x:String" Name="strDept" />
+      <Variable x:TypeArguments="x:String" Name="intPhone" />
+      <Variable x:TypeArguments="x:String" Name="strTransport" />
+      <Variable x:TypeArguments="x:String" Name="strMail" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BuildDataTable DataTable="[dtData]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="908,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;NAME&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;DEPARTMENT&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PHONE_x0020_NUMBER&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;E-MAIL_x0020_ID&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;TRANSPORT&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="908,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="If you wish to fill the form , then type 1 or else type 2 : " Title="STUDENT DETAILS">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:Int32">[UserInput]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:InterruptibleDoWhile Condition="[UserInput = 1]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="908,1874.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+      <ui:InterruptibleDoWhile.Body>
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="872.8,1707.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <If Condition="[UserInput = 2]" sap:VirtualizedContainerService.HintSize="831.2,1614.4" sap2010:WorkflowViewState.IdRef="If_1">
+            <If.Then>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Thanks for your valuable input !!!&quot;]" />
+            </If.Then>
+            <If.Else>
+              <Sequence sap:VirtualizedContainerService.HintSize="453.6,1464.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="Path" />
+                  <Variable x:TypeArguments="x:String" Name="UserMail" />
+                  <Variable x:TypeArguments="x:String" Name="Password" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ufa:FormActivity Dismissed="{x:Null}" FormFieldsInputData="{x:Null}" FormTitle="{x:Null}" SelectedButton="{x:Null}" TimeoutInSeconds="{x:Null}" WindowPositionLeft="{x:Null}" WindowPositionTop="{x:Null}" DisableMaximizeButton="False" DisableMinimizeButton="False" DisplayName="Create Form" FormFieldsOutputData="[strData]" FormHeight="400" FormSchema="%[{&quot;tag&quot;:&quot;h1&quot;,&quot;refreshOnChange&quot;:true,&quot;content&quot;:&quot;STUDENT DETAILS&quot;,&quot;key&quot;:&quot;label&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Label&quot;,&quot;type&quot;:&quot;label&quot;,&quot;calculateServer&quot;:false},{&quot;label&quot;:&quot;Name&quot;,&quot;labelPosition&quot;:&quot;left-left&quot;,&quot;spellcheck&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;name&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;calculateServer&quot;:false},{&quot;label&quot;:&quot;Department&quot;,&quot;labelPosition&quot;:&quot;left-left&quot;,&quot;widget&quot;:&quot;choicesjs&quot;,&quot;tableView&quot;:true,&quot;data&quot;:{&quot;values&quot;:[{&quot;value&quot;:&quot;CSE&quot;,&quot;label&quot;:&quot;CSE&quot;},{&quot;label&quot;:&quot;IT&quot;,&quot;value&quot;:&quot;IT&quot;},{&quot;label&quot;:&quot;AI &amp; DS&quot;,&quot;value&quot;:&quot;AI &amp; DS&quot;},{&quot;label&quot;:&quot;MECH&quot;,&quot;value&quot;:&quot;MECH&quot;},{&quot;label&quot;:&quot;CIVIL&quot;,&quot;value&quot;:&quot;CIVIL&quot;},{&quot;label&quot;:&quot;ECE&quot;,&quot;value&quot;:&quot;ECE&quot;}]},&quot;key&quot;:&quot;department&quot;,&quot;type&quot;:&quot;select&quot;,&quot;indexeddb&quot;:{&quot;filter&quot;:{}},&quot;input&quot;:true,&quot;calculateServer&quot;:false,&quot;uniqueOptions&quot;:false},{&quot;label&quot;:&quot;Phone Number&quot;,&quot;labelPosition&quot;:&quot;left-left&quot;,&quot;inputMask&quot;:&quot;(999)999-9999&quot;,&quot;tableView&quot;:false,&quot;key&quot;:&quot;phoneNumber&quot;,&quot;type&quot;:&quot;phoneNumber&quot;,&quot;input&quot;:true,&quot;calculateServer&quot;:false,&quot;spellcheck&quot;:true},{&quot;label&quot;:&quot;E-Mail ID&quot;,&quot;labelPosition&quot;:&quot;left-left&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;eMailId&quot;,&quot;type&quot;:&quot;email&quot;,&quot;input&quot;:true,&quot;calculateServer&quot;:false,&quot;spellcheck&quot;:true},{&quot;label&quot;:&quot;Transport&quot;,&quot;labelPosition&quot;:&quot;left-left&quot;,&quot;optionsLabelPosition&quot;:&quot;right&quot;,&quot;inline&quot;:false,&quot;tableView&quot;:false,&quot;defaultValue&quot;:&quot;seg&quot;,&quot;values&quot;:[{&quot;label&quot;:&quot;Day-Scholar&quot;,&quot;value&quot;:&quot;Day-Scholar&quot;,&quot;shortcut&quot;:&quot;&quot;},{&quot;label&quot;:&quot;Hostel&quot;,&quot;value&quot;:&quot;Hostel&quot;,&quot;shortcut&quot;:&quot;&quot;}],&quot;key&quot;:&quot;transport&quot;,&quot;type&quot;:&quot;radio&quot;,&quot;input&quot;:true,&quot;calculateServer&quot;:false},{&quot;label&quot;:&quot;Submit&quot;,&quot;disableOnInvalid&quot;:true,&quot;tableView&quot;:false,&quot;key&quot;:&quot;submit&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;type&quot;:&quot;button&quot;,&quot;input&quot;:true,&quot;calculateServer&quot;:false}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;100140&quot;,&quot;Name&quot;:&quot;Cosmo&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/cosmo.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/cosmo.png&quot;,&quot;OverrideCssUrl&quot;:&quot;&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" FormWidth="800" GenerateInputFields="False" sap:VirtualizedContainerService.HintSize="412,397.6" sap2010:WorkflowViewState.IdRef="FormActivity_1" IsReadOnly="False" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="False">
+                  <ufa:FormActivity.Body>
+                    <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,271.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{strName,strDept,intPhone,strMail,strTransport}]" DataTable="[dtData]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                        <ui:WriteRange AddHeaders="True" DataTable="[dtData]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="STUDENT DETAILS" StartingCell="A1" WorkbookPath="C:\Users\madhumitha m\Desktop\RPA Day 43 - 46.xlsx" />
+                      </Sequence>
+                    </ActivityAction>
+                  </ufa:FormActivity.Body>
+                  <ufa:FormActivity.DelayBody>
+                    <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+                      <Delay Duration="00:00:00.2500000" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                    </ActivityAction>
+                  </ufa:FormActivity.DelayBody>
+                  <ufa:FormActivity.FormFieldsCollection>
+                    <OutArgument x:TypeArguments="x:String" x:Key="name">[strName]</OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="department">[strDept]</OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="phoneNumber">[intPhone]</OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="transport">[strTransport]</OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="eMailId">[strMail]</OutArgument>
+                  </ufa:FormActivity.FormFieldsCollection>
+                </ufa:FormActivity>
+                <ui:SelectFile DisplayName="Select File" Filter="All files (*.*)|*.*" sap:VirtualizedContainerService.HintSize="412,22.4" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[Path]" />
+                <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="412,22.4" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnKUan6F9aUSbYAs0Y8VwrQAAAAACAAAAAAAQZgAAAAEAACAAAABgIsC+QIL+XcGroiyMPItdVR3DhGRsmtKcsNoi0IgH4gAAAAAOgAAAAAIAACAAAAAC+ofORLaA9aXZI5zupm3Sj5v2Y4F3trGVJ+QKnOexoRAAAAAdgRuG2BQlRDR3ui6BrZqBQAAAAKxnnxLEaxSMTgd7NXd+CAYzzlvJTPXuZTcVZN13dHl4HSJqMVYcdol+i7xTCgyp2v/yA+aErZigWWMo3g7hVDU=" Result="[Password]" />
+                <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="412,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Enter the mail id to which the file has to be sent : " Title="STUDENT DETAILS">
+                  <ui:InputDialog.Result>
+                    <OutArgument x:TypeArguments="x:String">[UserMail]</OutArgument>
+                  </ui:InputDialog.Result>
+                </ui:InputDialog>
+                <ui:SendMail Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Send SMTP Mail Message" Email="madhumaruthu369@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="412,146.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Name="Madhu" Password="[Password]" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="This is a mail containing the details of the student !!!" To="[UserMail]">
+                  <ui:SendMail.Files>
+                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                      <InArgument x:TypeArguments="x:String">[Path]</InArgument>
+                    </scg:List>
+                  </ui:SendMail.Files>
+                </ui:SendMail>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="412,60" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Hurray !!! The mail has been successfully sent to &quot; + UserMail + &quot; !!!&quot;]" />
+                <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="412,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="If you wish to fill the form again , then type 1 or else type 2 : " Title="STUDENT DETAILS">
+                  <ui:InputDialog.Result>
+                    <OutArgument x:TypeArguments="x:Int32">[UserInput]</OutArgument>
+                  </ui:InputDialog.Result>
+                </ui:InputDialog>
+              </Sequence>
+            </If.Else>
+          </If>
+        </Sequence>
+      </ui:InterruptibleDoWhile.Body>
+    </ui:InterruptibleDoWhile>
+  </Sequence>
+</Activity>
